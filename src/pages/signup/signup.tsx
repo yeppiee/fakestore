@@ -1,18 +1,16 @@
 import { Center, Flex, Text } from '@mantine/core';
 import { Link } from 'atomic-router-react';
 
-import { homeRoute } from '@/pages/home/model';
-import { signInRoute } from '@/pages/signin/model';
-import { signUpRoute } from '@/pages/signup/model';
+import { routes } from '@/shared/config/routes';
 
 export const SignUp = () => {
   return (
     <Center h="100%">
       <Flex direction="column">
         <Text>SignUp Page</Text>
-        <Link to={homeRoute}>go to home page</Link>
-        <Link to={signInRoute}>go to signIn page</Link>
-        <Link to={signUpRoute}>go to signUp page</Link>
+        <Link to={routes.home}>go to home page</Link>
+        <Link to={routes.auth.signIn}>go to signIn page</Link>
+        <Link to={routes.auth.signUp}>go to signUp page</Link>
       </Flex>
     </Center>
   );

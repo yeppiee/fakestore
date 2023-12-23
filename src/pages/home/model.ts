@@ -1,4 +1,4 @@
-import { routes } from '@/shared/config/router';
+import { routes } from '@/shared/config/routes';
 
 export const homeRoute = routes.home;
 

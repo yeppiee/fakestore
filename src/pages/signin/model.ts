@@ -1,3 +1,3 @@
-import { routes } from "@/shared/config/router";
+import { routes } from '@/shared/config/routes';
 
-export const signInRoute = routes.auth.signIn
+export const signInRoute = routes.auth.signIn;

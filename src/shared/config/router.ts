@@ -1,16 +1,9 @@
-import { createHistoryRouter, createRoute, createRouterControls } from 'atomic-router';
+import { createHistoryRouter, createRouterControls } from 'atomic-router';
 import { sample } from 'effector';
 import { createBrowserHistory } from 'history';
 
 import { appStarted } from '@/shared/config/init';
-
-export const routes = {
-  home: createRoute(),
-  auth: {
-    signIn: createRoute(),
-    signUp: createRoute(),
-  },
-};
+import { routes } from '@/shared/config/routes';
 
 const controls = createRouterControls();
 
