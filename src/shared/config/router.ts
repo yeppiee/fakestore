@@ -14,12 +14,12 @@ export const router = createHistoryRouter({
       route: routes.home,
     },
     {
-      path: '/signIn',
-      route: routes.auth.signIn,
+      path: '/login',
+      route: routes.auth.login,
     },
     {
-      path: '/signUp',
-      route: routes.auth.signUp,
+      path: '/signup',
+      route: routes.auth.signup,
     },
   ],
   controls,

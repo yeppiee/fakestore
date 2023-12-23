@@ -1,3 +1,3 @@
 import { routes } from '@/shared/config/routes';
 
-export const signInRoute = routes.auth.signIn;
+export const loginRoute = routes.auth.login;

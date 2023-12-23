@@ -1,11 +1,11 @@
 import { createRoutesView } from 'atomic-router-react';
 
 import { HomeRoute } from '@/pages/home';
-import { SignInRoute } from '@/pages/signin';
-import { SignUpRoute } from '@/pages/signup';
+import { LoginRoute } from '@/pages/login';
 import { NotFound } from '@/pages/not-found/not-found';
+import { SignUpRoute } from '@/pages/signup';
 
 export const Routes = createRoutesView({
-  routes: [HomeRoute, SignInRoute, SignUpRoute],
+  routes: [HomeRoute, LoginRoute, SignUpRoute],
   otherwise: NotFound,
 });
