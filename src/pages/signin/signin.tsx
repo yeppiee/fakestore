@@ -1,3 +1,14 @@
+import { Button, Center, Flex, Text } from '@mantine/core';
+
 export const SignIn = () => {
-  return <div>SignIn page</div>;
+  return (
+    <Center h="100%">
+      <Flex direction="column">
+        <Text>SignIn Page</Text>
+        <Button variant="filled" color="green" radius="md">
+          Button
+        </Button>
+      </Flex>
+    </Center>
+  );
 };
