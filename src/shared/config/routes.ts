@@ -4,6 +4,5 @@ export const routes = {
   home: createRoute(),
   auth: {
     login: createRoute(),
-    signup: createRoute(),
   },
 };

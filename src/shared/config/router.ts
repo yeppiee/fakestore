@@ -17,10 +17,6 @@ export const router = createHistoryRouter({
       path: '/login',
       route: routes.auth.login,
     },
-    {
-      path: '/signup',
-      route: routes.auth.signup,
-    },
   ],
   controls,
 });
