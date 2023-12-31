@@ -1,4 +1,5 @@
-import { createEvent, createStore, sample } from 'effector';
+import { createEvent, createStore } from 'effector';
+import { condition } from 'patronum';
 
 import { routes } from '@/shared/config/routes';
 
@@ -10,16 +11,11 @@ export const $isAuthorized = createStore(false);
 $isAuthorized.on(loginClicked, () => true);
 $isAuthorized.on(logoutClicked, () => false);
 
-sample({
-  clock: $isAuthorized,
-  filter: (isAuthorized) => isAuthorized,
-  target: routes.home.open,
-});
-
-sample({
-  clock: $isAuthorized,
-  filter: (isAuthorized) => !isAuthorized,
-  target: routes.auth.login.open,
+condition({
+  source: $isAuthorized,
+  if: true,
+  then: routes.home.open,
+  else: routes.auth.login.open,
 });
 
 $isAuthorized.watch((state) => console.log('state', state));
