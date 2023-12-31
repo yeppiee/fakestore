@@ -1,5 +1,12 @@
-import { TestNavigation } from '@/features/test-navigation';
+import { loginClicked } from '@/shared/auth';
+import { Button, Center, Container } from '@mantine/core';
 
 export const Login = () => {
-  return <TestNavigation title="Login Page" />;
+  return (
+    <Container h="100%" w="100%">
+      <Center h="100%" w="100%">
+        <Button onClick={() => loginClicked()}>Login</Button>
+      </Center>
+    </Container>
+  );
 };
