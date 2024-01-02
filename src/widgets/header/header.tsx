@@ -3,7 +3,7 @@ import { IconLogout } from '@tabler/icons-react';
 
 import { ThemeButton } from '@/features/theme-button';
 
-import { logoutClicked } from '@/shared/auth';
+import { logout } from '@/shared/session';
 
 import styles from './header.module.css';
 
@@ -14,7 +14,7 @@ export const Header = () => {
         <Flex columnGap="xs">
           <ThemeButton />
           <ActionIcon>
-            <IconLogout onClick={() => logoutClicked()} stroke={1.5} />
+            <IconLogout onClick={() => logout()} stroke={1.5} />
           </ActionIcon>
         </Flex>
       </Container>
