@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "^7.3.2",
-    "@mantine/hooks": "^7.3.2",
-    "@tabler/icons-react": "^2.44.0",
+    "@mantine/core": "^7.4.0",
+    "@mantine/hooks": "^7.4.0",
+    "@tabler/icons-react": "^2.45.0",
     "atomic-router": "^0.9.3",
     "atomic-router-react": "^0.9.1",
     "effector": "^23.1.0",
@@ -24,21 +24,22 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "clsx": "^2.0.0",
-    "eslint": "^8.55.0",
+    "clsx": "^2.1.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "npm-check-updates": "^16.14.12",
     "postcss": "^8.4.32",
-    "postcss-preset-mantine": "^1.12.2",
+    "postcss-preset-mantine": "^1.12.3",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.1.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   }
 }
