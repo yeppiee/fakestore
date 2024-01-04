@@ -6,6 +6,7 @@ import {
   RouteParamsAndQuery,
 } from 'atomic-router';
 import { createEvent, createStore, Effect, Event, EventCallable, sample } from 'effector';
+import { persist } from 'effector-storage/local';
 
 import { routes } from '@/shared/config/routes';
 
@@ -18,6 +19,7 @@ export const login = createEvent();
 export const logout = createEvent();
 
 export const $isAuthorized = createStore(false);
+persist({ store: $isAuthorized, key: 'isAuthorized' });
 
 $isAuthorized.on(login, () => true);
 redirect({
