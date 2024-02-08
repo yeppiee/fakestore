@@ -27,8 +27,8 @@ sample({
 });
 
 sample({
-  clock: fetchAllCategoriesFx.done,
-  fn: ({ result }) => ({ allCategories: result, activeCategory: result[0] }),
+  clock: fetchAllCategoriesFx.doneData,
+  fn: (result) => ({ allCategories: result, activeCategory: result[0] }),
   target: spread({
     allCategories: $allCategories,
     activeCategory: $activeCategory,
@@ -37,6 +37,5 @@ sample({
 
 sample({
   clock: categoryChanged,
-  fn: (category) => category,
   target: $activeCategory,
 });
