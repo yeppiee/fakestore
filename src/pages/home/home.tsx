@@ -3,6 +3,7 @@ import { useUnit } from 'effector-react';
 
 import { PageLayout } from '@/shared/ui/layouts/page-layout';
 
+import styles from './home.module.css';
 import { $activeCategory, $allCategories, categoryChanged } from './model';
 
 export const Home = () => {
@@ -10,7 +11,12 @@ export const Home = () => {
 
   return (
     <PageLayout>
-      <Tabs value={activeCategory} onChange={categoryChanged} mt={'xl'}>
+      <Tabs
+        value={activeCategory}
+        onChange={categoryChanged}
+        mt={'xl'}
+        classNames={{ tab: styles.tab }}
+      >
         <Tabs.List>
           {allCategories.map((category, i) => (
             <Tabs.Tab key={i} value={category}>

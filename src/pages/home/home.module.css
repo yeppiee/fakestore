@@ -1,0 +1,5 @@
+.tab {
+  &[data-active] {
+    border-color: var(--mantine-primary-color-8);
+  }
+}
