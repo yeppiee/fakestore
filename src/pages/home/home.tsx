@@ -1,13 +1,17 @@
-import { Tabs } from '@mantine/core';
+import { Image, List, ListItem, Tabs } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
 import { PageLayout } from '@/shared/ui/layouts/page-layout';
 
 import styles from './home.module.css';
-import { $activeCategory, $allCategories, categoryChanged } from './model';
+import { $activeCategory, $allCategories, $categoryProducts, categoryChanged } from './model';
 
 export const Home = () => {
-  const [allCategories, activeCategory] = useUnit([$allCategories, $activeCategory]);
+  const [allCategories, activeCategory, specificCategoryList] = useUnit([
+    $allCategories,
+    $activeCategory,
+    $categoryProducts,
+  ]);
 
   return (
     <PageLayout>
@@ -25,6 +29,13 @@ export const Home = () => {
           ))}
         </Tabs.List>
       </Tabs>
+      <List>
+        {specificCategoryList.map((product) => (
+          <ListItem key={product.id}>
+            <Image src={product.image} h={100} w={100} />
+          </ListItem>
+        ))}
+      </List>
     </PageLayout>
   );
 };
